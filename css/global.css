@@ -1,0 +1,16 @@
+@import "reset.css";
+@import "fonts.css";
+
+body {
+  font-family: "Source Sans Pro";
+  background-color: #fff;
+  color: #111;
+}
+
+main {
+  display: block;
+  max-width: 1350px;
+  width: 96%;
+  margin: 24px auto;
+  /* outline: solid 1px red; */
+}

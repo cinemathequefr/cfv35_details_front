@@ -1,0 +1,218 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="css/global.css" />
+
+    <style>
+      .container {
+        display: grid;
+        grid-template-columns: 4fr 4fr 4fr 3fr;
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+        /* grid-template-columns: 22fr 22fr 22fr 34fr; */
+        grid-template-rows: 1fr;
+        gap: 5px;
+        line-height: 1.25;
+      }
+
+      .container > div {
+        /* gap: 4px 0; */
+        /* outline: solid 1px red;   */
+      }
+
+      a.seance {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        padding: 6px 6px 16px 6px;
+        text-decoration: none;
+        color: inherit;
+        transition: 0;
+      }
+      .seance:hover {
+        background-color: #222;
+        color: #eee;
+
+        /* background-color: #eee; */
+      }
+
+      .seance:hover .remarque1 {
+        transition: color;
+        color: #eee;
+      }
+
+      .seance-heure-salle-container {
+        flex: 0 1 33.33%;
+      }
+
+      .seance-heure-salle {
+        text-align: center;
+        padding-bottom: 2px;
+        border-bottom: solid 1px #ddd;
+        margin: 0 16px;
+      }
+
+      .seance-details {
+        flex: 0 1 66.67%;
+      }
+
+      .cycle {
+        font-family: Quicksand;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+      }
+
+      .titre {
+        font-weight: 600;
+      }
+
+      .more {
+        font-weight: 600;
+      }
+
+      .remarque1 {
+        margin: 4px 0;
+        border-left: solid 4px #6af7d6;
+        padding-left: 6px;
+        color: #666;
+      }
+
+      .extra {
+        background-color: #f7f7f7;
+        /* padding: 6px 12px 12px 12px; */
+      }
+
+      a.extra-item {
+        display: block;
+        padding: 6px 18px;
+        text-decoration: none;
+        color: inherit;
+      }
+
+      .extra-titre {
+        font-family: Quicksand;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      a.extra-item:hover {
+        /* color: #6af7d6; */
+        background-color: #222;
+        color: #fff;
+        /* background-color: #e7e7e7; */
+        transition: 0.15s;
+      }
+
+      @media (max-width: 1023px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+
+        .seance-heure-salle-container {
+          flex: 0 0 6em;
+        }
+
+        .seance-details {
+          flex: 1 1 auto;
+        }
+
+        a.extra-item {
+          padding-left: 6em;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div></div>
+        <div>
+          <a class="seance" href="javascript: void 0;">
+            <div class="seance-heure-salle-container">
+              <div class="seance-heure-salle">
+                <span class="seance-heure">19h00</span>
+                <span class="seance-salle">GF</span>
+              </div>
+            </div>
+            <div class="seance-details">
+              <div class="cycle">Alain Resnais</div>
+              <ul>
+                <li>
+                  <div class="titre">I Want to Go Home</div>
+                  <div class="realisateur-annee">Alain Resnais, 1988</div>
+                </li>
+              </ul>
+            </div>
+          </a>
+          <a class="seance" href="javascript: void 0;">
+            <div class="seance-heure-salle-container">
+              <div class="seance-heure-salle">
+                <span class="seance-heure">19h30</span>
+                <span class="seance-salle">JE</span>
+              </div>
+            </div>
+            <div class="seance-details">
+              <div class="cycle">Aujourd'hui le cinéma&nbsp;: Joël Akafou</div>
+
+              <div class="remarque1">
+                Avant-première suivie d'une discussion avec Joël Akafou
+              </div>
+
+              <ul>
+                <li>
+                  <div class="titre">Traverser</div>
+                  <div class="realisateur-annee">Joël Akafou, 2020</div>
+                </li>
+              </ul>
+            </div>
+          </a>
+        </div>
+        <div>
+          <a class="seance" href="javascript: void 0;">
+            <div class="seance-heure-salle-container">
+              <div class="seance-heure-salle">
+                <span class="seance-heure">21h15</span>
+                <span class="seance-salle">GF</span>
+              </div>
+            </div>
+            <div class="seance-details">
+              <div class="cycle">Alain Resnais</div>
+              <ul>
+                <li>
+                  <div class="titre">Portrait d'Henri Goetz</div>
+                  <div class="realisateur-annee">Alain Resnais, 1947</div>
+                </li>
+              </ul>
+              <div class="more">+&nbsp;6 films</div>
+            </div>
+          </a>
+        </div>
+        <div class="extra">
+          <a class="extra-item" href="javascript: void 0;">
+            <div class="extra-titre">
+              Exposition&nbsp;: CinéMode par Jean Paul Gaultier
+            </div>
+            <div>12h → 19h</div>
+          </a>
+          <a class="extra-item" href="javascript: void 0;">
+            <div class="extra-titre">Musée Méliès</div>
+            <div>12h → 19h</div>
+          </a>
+          <a class="extra-item" href="javascript: void 0;">
+            <div class="extra-titre">Bibliothèque</div>
+            <div>10h → 19h</div>
+          </a>
+          <a class="extra-item" href="javascript: void 0;">
+            <div class="extra-titre">Librairie</div>
+            <div>12h → 19h</div>
+          </a>
+          <a class="extra-item" href="javascript: void 0;">
+            <div class="extra-titre">Restaurant</div>
+            <div>12h → 14h</div>
+          </a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
