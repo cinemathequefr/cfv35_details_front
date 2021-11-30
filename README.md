@@ -1,0 +1,1 @@
+# cfv35_details_front
