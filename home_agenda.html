@@ -6,15 +6,64 @@
     <link rel="stylesheet" href="css/global.css" />
 
     <style>
+      /* .day-tab-container {
+      } */
+
+      .day-tab-container ul {
+        display: flex;
+        flex-direction: row;
+        border-bottom: solid 1px #ccc;
+
+        align-items: stretch;
+      }
+
+      .day-tab-container li {
+        flex: 0 1 auto;
+        transform: translateY(1px);
+        max-width: 33.33%;
+      }
+
+      .day-tab-container a {
+        display: block;
+        padding: 12px 24px;
+        /* padding: 16px 28px; */
+        /* padding: 30px 52px; */
+        font-family: Quicksand;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        text-align: center;
+        color: #666;
+        border: solid 1px transparent;
+      }
+
+      .day-tab-container a.link-calendar:hover {
+        background-color: transparent;
+        color: #111;
+      }
+
+      .day-tab-container a.active {
+        color: #111;
+        border-bottom: solid 1px #6af7d6;
+        background-color: #6af7d6;
+      }
+
+      .day-tab-container a:not(.active):not(.link-calendar):hover,
+      .day-tab-container a:not(.active):not(.link-calendar):active {
+        background-color: #b3faea;
+        border-bottom: solid 1px #ccc;
+      }
+
       .day-container {
         display: grid;
         /* grid-template-columns: 4fr 4fr 4fr 3fr; */
         grid-template-columns: 22fr 22fr 22fr 34fr;
         grid-template-rows: 1fr;
         gap: 5px;
-        border-top: solid 2px #ccc;
-        border-bottom: solid 2px #ccc;
-        padding: 12px 0;
+        /* border-top: solid 2px #ccc; */
+        border-bottom: solid 1px #ccc;
+        padding: 18px 0;
         font-size: 0.875rem;
         line-height: 1.25;
       }
@@ -49,7 +98,7 @@
         padding-bottom: 6px;
         /* https://stackoverflow.com/questions/24528346/can-i-make-border-bottom-look-narrower-than-div/24528394 */
         background: linear-gradient(#ddd, #ddd) no-repeat;
-        background-size: 75% 0.5px;
+        background-size: 75% 0.75px;
         background-position: center bottom;
         margin: 0 8px 0 4px;
         font-weight: 600;
@@ -150,6 +199,14 @@
   </head>
   <body>
     <main>
+      <div class="day-tab-container">
+        <ul>
+          <li><a href="javascript:void 0;">Lu 29 nov</a></li>
+          <li><a href="javascript:void 0;">Ma 30 nov</a></li>
+          <li><a class="active" href="javascript:void 0;">Me 1 déc</a></li>
+          <!-- <li><a class="link-calendar" href="javascript:void 0;">⋯</a></li> -->
+        </ul>
+      </div>
       <div class="day-container">
         <div>
           <a class="seance" href="javascript: void 0;">
