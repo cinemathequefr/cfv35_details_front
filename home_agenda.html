@@ -4,12 +4,15 @@
     <link rel="stylesheet" href="css/global.css" />
 
     <style>
-      .container {
+      .day-container {
         display: grid;
         /* grid-template-columns: 4fr 4fr 4fr 3fr; */
         grid-template-columns: 22fr 22fr 22fr 34fr;
         grid-template-rows: 1fr;
         gap: 5px;
+        border-top: solid 2px #ccc;
+        border-bottom: solid 2px #ccc;
+        padding: 12px 0;
         font-size: 0.875rem;
         line-height: 1.25;
       }
@@ -19,7 +22,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: flex-start;
-        align-content: stretch;
+        /* align-content: stretch; */
         padding: 6px 6px 16px 6px;
         text-decoration: none;
         color: inherit;
@@ -36,6 +39,7 @@
       }
 
       .seance-heure-salle-container {
+        display: inline-block;
         flex: 0 1 33.33%;
       }
 
@@ -97,8 +101,9 @@
       }
 
       @media (max-width: 1023px) {
-        .container {
+        .day-container {
           grid-template-columns: 1fr;
+          gap: 0;
         }
 
         .seance-heure-salle-container {
@@ -113,11 +118,29 @@
           padding-left: 6em;
         }
       }
+
+      @media (max-width: 575px) {
+        a.seance {
+          flex-direction: column;
+        }
+
+        .seance-heure-salle-container {
+          flex: 0 0 auto;
+        }
+        .seance-heure-salle {
+          margin: 0 80% 6px 0;
+          text-align: left;
+        }
+
+        a.extra-item {
+          padding-left: 6px;
+        }
+      }
     </style>
   </head>
   <body>
     <main>
-      <div class="container">
+      <div class="day-container">
         <div>
           <a class="seance" href="javascript: void 0;">
             <div class="seance-heure-salle-container">
@@ -218,7 +241,7 @@
             <div>12h → 19h</div>
           </a>
           <a class="extra-item" href="javascript: void 0;">
-            <div class="extra-titre">Restaurant</div>
+            <div class="extra-titre">Restaurant Les 400 coups</div>
             <div>12h → 14h</div>
           </a>
         </div>
