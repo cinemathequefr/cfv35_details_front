@@ -1,5 +1,7 @@
-<html>
-  <head>
+<html lang="fr">
+  <head
+    ><meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
     <title>Home</title>
     <link rel="stylesheet" href="css/global.css" />
 
@@ -22,7 +24,6 @@
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: flex-start;
-        /* align-content: stretch; */
         padding: 6px 6px 16px 6px;
         text-decoration: none;
         color: inherit;
@@ -45,9 +46,13 @@
 
       .seance-heure-salle {
         text-align: center;
-        padding-bottom: 2px;
-        border-bottom: solid 1px #ddd;
-        margin: 0 16px;
+        padding-bottom: 6px;
+        /* https://stackoverflow.com/questions/24528346/can-i-make-border-bottom-look-narrower-than-div/24528394 */
+        background: linear-gradient(#ddd, #ddd) no-repeat;
+        background-size: 75% 0.5px;
+        background-position: center bottom;
+        margin: 0 8px 0 4px;
+        font-weight: 600;
       }
 
       .seance-details {
