@@ -134,17 +134,23 @@
         color: #666;
       }
 
-      /*
       .extra {
-        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-left: solid 1px #ccc;
       }
-      */
 
       a.extra-item {
         display: block;
+        border-top: solid 1px #ccc;
         padding: 6px 18px;
         text-decoration: none;
         color: inherit;
+      }
+
+      a.extra-item:first-child {
+        border-top: none;
       }
 
       .extra-titre {
