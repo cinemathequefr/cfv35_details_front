@@ -76,7 +76,7 @@
         padding: 6px 6px 16px 6px;
         text-decoration: none;
         color: inherit;
-        transition: 0;
+        transition: 0s;
       }
       .seance:hover {
         background-color: #222;
@@ -102,6 +102,11 @@
         background-position: center bottom;
         margin: 0 8px 0 4px;
         font-weight: 600;
+        font-size: 1rem;
+      }
+
+      .seance-salle {
+        display: inline-block;
       }
 
       .seance-details {
@@ -112,10 +117,12 @@
         font-family: Quicksand;
         text-transform: uppercase;
         margin-bottom: 4px;
+        line-height: 1.2em;
       }
 
       .titre {
         font-weight: 600;
+        font-size: 1rem;
       }
 
       .more {
@@ -138,13 +145,14 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        border-left: solid 1px #ccc;
+        border-left: solid 1px #ddd;
       }
 
       a.extra-item {
         display: block;
-        border-top: solid 1px #ccc;
-        padding: 6px 18px;
+        margin: 0 0 0 16px;
+        border-top: solid 1px #ddd;
+        padding: 6px 18px 6px 2px;
         text-decoration: none;
         color: inherit;
       }
